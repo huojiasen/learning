@@ -15,7 +15,7 @@ spec:
   spec:
    containers: 
    - name: label-service
-     image: 331440580245.dkr.ecr.cn-northwest-1.amazonaws.com.cn/label-service:v5
+     image: _
      ports:
       - containerPort: 8009
         name: http
