@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+ name: label-service
+ namespace: map-dev
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: label-service
+ template:
+  metadata:
+   labels:
+    app: label-service
+  spec:
+   containers: 
+   - name: label-service
+     image: 331440580245.dkr.ecr.cn-northwest-1.amazonaws.com.cn/label-service:v5
+     ports:
+      - containerPort: 8009
+        name: http
+        protocol: TCP
