@@ -1,0 +1,15 @@
+git branch feature/maploc
+git checkout feature/maploc
+
+git branch -u origin/feature/maploc
+git pull --rebase
+
+git add .
+    
+git commit -m 'test'
+
+arc diff feature/maploc
+
+arc diff feature/maploc --update Dxxxx
+
+arc land --onto feature/maploc
